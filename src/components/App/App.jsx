@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Searchbar from "../Searchbar/Searchbar";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import './App.css'
-
+import PropTypes from 'prop-types';
 const App = () => {
   const [searchText, setIssearchText] = useState('')
  
@@ -20,5 +20,8 @@ const App = () => {
     );
   }
 
+  App.propTypes = {
+  searchText: PropTypes.string.isRequired,
+};
 
 export default App;

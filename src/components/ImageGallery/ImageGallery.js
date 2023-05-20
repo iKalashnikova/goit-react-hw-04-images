@@ -4,6 +4,7 @@ import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 import './ImageGallery.css';
 import { Button } from 'components/Button/Button';
 import Modal from '../Modal/Modal'
+import PropTypes from 'prop-types';
 
 const ImageGallery = ({searchText}) => {
   const [images, setIsImages] = useState([]);
@@ -120,6 +121,9 @@ const handleLoadMoreClick = () => {
     }
   }
 
+  ImageGallery.propTypes = {
+  searchText: PropTypes.string.isRequired,
+};
 
 
 export default ImageGallery
